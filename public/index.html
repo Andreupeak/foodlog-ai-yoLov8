@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>FoodLog AI — YOLOv8-Seg demo</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>FoodLog AI — YOLOv8-Seg (Replicate) + OpenAI</h1>
+
+    <div class="box">
+      <label><strong>Choose image</strong></label>
+      <input id="fileInput" type="file" accept="image/*">
+      <button id="identifyBtn">Identify dish</button>
+      <button id="segmentBtn">Segment (YOLOv8-Seg)</button>
+      <div id="status" class="muted">Drop an image and click Identify → Segment</div>
+    </div>
+
+    <div class="box">
+      <canvas id="canvas" style="max-width:100%;border:1px solid #333"></canvas>
+      <div id="info" class="muted"></div>
+    </div>
+
+    <div class="box">
+      <button id="estimateBtn">Estimate Portion (uses mask)</button>
+      <pre id="resultPre">No result yet</pre>
+    </div>
+
+  </div>
+
+  <script src="/app.js"></script>
+</body>
+</html>
